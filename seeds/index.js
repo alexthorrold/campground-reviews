@@ -23,9 +23,15 @@ const seedDB = async () => {
         const price = Math.floor(Math.random() * 20 + 10);
 
         const c = new Campground({
+            author: '632b299f20829d3c2bbb4ffe',
             location: `${cities[rand].city}, ${cities[rand].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://media.gettyimages.com/photos/young-woman-watches-sunrise-outside-camping-tent-picture-id1248575497?s=2048x2048',
+            images: [
+                {
+                    url: 'https://res.cloudinary.com/da1g34v2f/image/upload/v1663852649/YelpCamp/l9gdikzzdmerkmivqyhp.jpg',
+                    filename: 'YelpCamp/l9gdikzzdmerkmivqyhp'
+                }
+            ],
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis dolores eaque et expedita hic ipsa iure, laudantium mollitia neque nesciunt quam quasi reprehenderit temporibus ut veritatis vero vitae voluptatum.',
             price: price
         });
