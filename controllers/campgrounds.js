@@ -36,7 +36,6 @@ module.exports.showCampground = async (req, res) => {
         path: 'reviews',
         populate: { path: 'author' }
     }).populate('author');
-    console.log(campground.geometry.coordinates);
     res.render('campgrounds/show', { campground });
 }
 
